@@ -317,7 +317,7 @@ class TemplateLookup(TemplateCollection):
                     **self.template_args,
                 )
                 return template
-            except:
+            except Exception:
                 # if compilation fails etc, ensure
                 # template is removed from collection,
                 # re-raise
