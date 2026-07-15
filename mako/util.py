@@ -59,7 +59,7 @@ def verify_directory(dir_):
         try:
             tries += 1
             os.makedirs(dir_, 0o755)
-        except:
+        except OSError:
             if tries > 5:
                 raise
 
